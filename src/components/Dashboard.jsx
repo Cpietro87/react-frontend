@@ -1,6 +1,7 @@
-// App.jsx
 import { useState } from "react";
+
 import {
+  Button,
   AppBar,
   Toolbar,
   Typography,
@@ -64,7 +65,10 @@ export default function Dashboard() {
         <Toolbar />
         <Typography variant="h4">{selected}</Typography>
         <Typography>
-          <ClientList/>
+          <Button variant="text">Text</Button>
+          <Button variant="contained">Contained</Button>
+          <Button variant="outlined">Outlined</Button>
+          <ClientList />
         </Typography>
       </Box>
     </Box>
