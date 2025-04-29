@@ -1,6 +1,6 @@
 import { useState } from "react";
-
 import {
+  Checkbox,
   Button,
   AppBar,
   Toolbar,
@@ -50,10 +50,11 @@ export default function Dashboard() {
         <List>
           {sections.map((text) => (
             <ListItem
-              button
+              component="button"
               key={text}
               selected={selected === text}
               onClick={() => setSelected(text)}
+              sx={{ textAlign: "left" }} 
             >
               <ListItemText primary={text} />
             </ListItem>
@@ -63,13 +64,16 @@ export default function Dashboard() {
 
       <Box component="main" sx={{ flexGrow: 1, p: 3 }}>
         <Toolbar />
-        <Typography variant="h4">{selected}</Typography>
-        <Typography>
+        <Typography variant="h4" gutterBottom>
+          {selected}
+        </Typography>
+
+        <Box>
           <Button variant="text">Text</Button>
           <Button variant="contained">Contained</Button>
           <Button variant="outlined">Outlined</Button>
           <ClientList />
-        </Typography>
+        </Box>
       </Box>
     </Box>
   );

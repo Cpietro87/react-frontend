@@ -17,7 +17,7 @@ function ClientList() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch("http://localhost:5000/api/clients") 
+    fetch("http://localhost:5000/api/clients")
       .then((res) => res.json())
       .then((data) => {
         setClients(data);
@@ -31,7 +31,7 @@ function ClientList() {
 
   return (
     <Box p={3}>
-      <Typography variant="h5" gutterBottom>
+      <Typography variant="h5" component="div" gutterBottom>
         Lista de Clientes
       </Typography>
 
@@ -72,4 +72,6 @@ function ClientList() {
 }
 
 export default ClientList;
+
+
 
